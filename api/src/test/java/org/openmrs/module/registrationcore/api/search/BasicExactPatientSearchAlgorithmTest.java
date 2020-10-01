@@ -81,7 +81,7 @@ public class BasicExactPatientSearchAlgorithmTest extends BaseRegistrationCoreSe
 		Patient patient = buildPatient(name, "M", date("1975-04-08"));
 		
 		List<PatientAndMatchQuality> matches = algorithm.findSimilarPatients(patient, null, 0d, null);
-		assertThat(matches.size(), is(0));
+		assertThat(matches.size(), is(1));
 		assertThat(matches.get(0).getPatient().getPatientId(), is(2));
 	}
 	
